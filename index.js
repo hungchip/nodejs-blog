@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
   var a = 1;
   var b = 2;
   var c = a + b;
-  res.send("Xin chào");
+  res.send("Xin chàoxxx");
 });
 
 app.listen(port, () => {
