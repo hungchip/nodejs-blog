@@ -1,0 +1,10 @@
+>>>http protocol
+>>> SSR & CSR
+1.server side renderding
+
+
+2.client side renderding
+
+
+>>> expressjs
+>>> Nodemon & inspector
