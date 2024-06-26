@@ -9,23 +9,29 @@ const hbs = require("express-handlebars");
 // var usersRouter = require("../routes/users");
 
 var app = express();
-// hbs.registerPartials(__dirname + '/views/partials');
+hbs.create({
+  partialsDir: [path.join(__dirname, "views/admin/partials")],
+});
+
 // view engine setup
+// app.engine(
+//   "hbs",
+//   hbs.create({
+//     helpers: () => {},
+//   })
+//   // hbs.engine({
+//   //   extname: "hbs",
+//   //   // defaultLayout: "",
+//   //   // layoutsDir: path.join(__dirname, "views/admin/layouts"),
+//   //   // partialsDir: [
+//   //   //   //  path to your partials
+//   //   //   path.join(__dirname, "views/admin/partials"),
+//   //   // ],
+//   // })
+// );
+
 app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "hbs");
-app.engine(
-  "hbs",
-  hbs.engine({
-    extname: "hbs",
-    // defaultLayout: "index",
-    // layoutsDir: path.join(__dirname, "views/admin/layouts"),
-    partialsDir: [
-      //  path to your partials
-      path.join(__dirname, "views/admin/partials"),
-      // path.join(__dirname, "views/client/partials"),
-    ],
-  })
-);
 
 app.use(logger("dev"));
 app.use(express.json());
