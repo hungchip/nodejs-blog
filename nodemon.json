@@ -1,0 +1,3 @@
+{
+  "watch": ["*.js", "www", "*.hbs", "*.css", ".scss", ".json"]
+}
